@@ -6,6 +6,7 @@ Type hinting is casting some errors in specific files. This is caused by the dic
 The naming convention for the the folders & files isn't following pep8. I'll fix it for the next assignment.
 I'm also planning to update file structure in a way that it's more "Python like" rather than the "C or Rust way" I've currently wrote it.
 
+(View this in Code format rather than Preview; otherwise the intended indentation is gone.)
 Program structure is:
     sensorMonitor ->
                     sensorInterface ->
