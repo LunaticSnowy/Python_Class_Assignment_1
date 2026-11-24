@@ -4,11 +4,11 @@
 
 from inc.helperRNG import generate_IMU_readings
 
-def sensor_init(sensorInitConfig: dict[str, float | int]) -> dict[str, float | int | str]:
-    """
-        Just imagine there's tons of very important initialisation logic happening in here.
-    """
- 
+def sensor_init(
+    sensorInitConfig: dict[str, float | int]
+) -> dict[str, float | int | str]:
+    
+    # Just imagine there's tons of very important initialisation logic happening in here.
     sensorInstance: dict[str, float | int | str] = {
         "lowerBound" : sensorInitConfig["lowerBound"],
         "upperBound" : sensorInitConfig["upperBound"],
@@ -19,7 +19,10 @@ def sensor_init(sensorInitConfig: dict[str, float | int]) -> dict[str, float | i
 
     return sensorInstance
 
-def sensor_reading(sensorInstance: dict[str, float | int]) -> dict[str, list[float]]:
+def sensor_reading(
+    sensorInstance: dict[str, float | int]
+) -> dict[str, list[float]]:
+    
     sensorResult: dict[str, list[float]] = {
     "X" : [],
     "Y" : [],

@@ -4,14 +4,15 @@ from inc.sensorIMU import sensor_reading as imu_reading
 from inc.sensorAnalog import sensor_init as adc_init
 from inc.sensorAnalog import sensor_reading as adc_reading
 
-
-def sensor_interface(userInput: dict[str, float | int], chosenSensor: str) -> None:
+def sensor_interface(
+    userInput: dict[str, float | int], chosenSensor: str
+) -> dict[str, list[float]] | list[int]:
 
     sensorInitConfig: dict[str, float | int] = {
         "lowerBound": userInput["lowerBound"],
         "upperBound": userInput["upperBound"],
         "alertBound": userInput["alertBound"],
-        "cycles": userInput["cycles"]
+        "cycles"    : userInput["cycles"]
     }
 
     if chosenSensor == "IMU":
@@ -25,4 +26,5 @@ def sensor_interface(userInput: dict[str, float | int], chosenSensor: str) -> No
     else:
         raise ValueError(f"Unknown sensor: {chosenSensor}")
 
-    print(result)
+    #print(result)
+    return result
